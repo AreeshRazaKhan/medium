@@ -1,10 +1,15 @@
 'use client';
 
-const Layout = ({children}) => {
+import Navbar from "@/components/layout/Navbar";
+import "../../styles/globals.css";
+
+
+const Layout = ({ children }) => {
 
   return (
     <>
-    {children}
+
+      {children}
     </>
   )
 }
