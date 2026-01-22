@@ -29,7 +29,7 @@ h1 {
 
 h2 {
   font-family: var(--font-neue-montreal);
-  font-size: 45px;
+  font-size: 85px;
   font-weight: 500;
   line-height: 111.111%;
 }
@@ -102,6 +102,21 @@ h6 {
 /* HERO SECTION STARTED */
 .hero-section {
   background: url('/images/hero-bg.webp') no-repeat center right/contain, #F7F4ED;
+}
+
+.our-story {
+  padding-top: 206px;
+  padding-bottom: 144px;
+}
+
+.links-section a {
+  font-size: 70px;
+  transition: all 0.3s linear;
+}
+
+.links-section a:hover {
+  color: #242424;
+  background-color: #fff;
 }
 
 
