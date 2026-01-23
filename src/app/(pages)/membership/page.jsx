@@ -7,8 +7,8 @@ const page = () => {
       <Navbar background="#fff" />
 
       <section className="border-b border-[#242424] mt-21.5 human-stories">
-        <div className="flex flex-row">
-          <div className="w-[70%] border-r border-[#242424] pt-16 pe-20 pb-12 ps-8 flex flex-col justify-between">
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-[70%] lg:border-r border-[#242424] py-12 px-8 md:pt-16 md:pe-20 md:pb-12 md:ps-8 flex flex-col justify-between gap-12 lg:gap-0">
             <h2 className="leading-none!">Support human stories</h2>
 
             <div className="flex flex-col max-w-135 gap-12">
@@ -18,17 +18,17 @@ const page = () => {
                 high-quality storytelling.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#" className="btn-sm btn-primary">
+                <a href="#" className="btn-md btn-primary">
                   Get started
                 </a>
-                <a href="#" className="btn-sm btn-outline">
+                <a href="#" className="btn-md btn-outline">
                   View plans
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="w-[30%] h-160">
+          <div className="w-full lg:w-[30%] h-140 md:h-160">
             <div className="flex flex-col h-full bg-[#d0d0d0]">
               <div className="flex-1 flex items-end img-slide">
                 <div className="membership-only flex items-center justify-center gap-2 btn-sm bg-[#ffc017] ms-8">
@@ -38,7 +38,7 @@ const page = () => {
                     height="18"
                     fill="none"
                     viewBox="0 0 64 64"
-                    class="kr"
+                    className="kr"
                   >
                     <path
                       fill="#242424"
@@ -75,13 +75,13 @@ const page = () => {
       </section>
 
       <section className="why-membership px-8 py-80 border-b border-[#242424]">
-        <div className="flex flex-row justify-start gap-12">
+        <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
               <h3 className="leading-none">Why membership?</h3>
             </div>
           </div>
-          <div className="max-w-170 flex flex-col gap-30">
+          <div className="max-w-170 flex flex-col gap-20 md:gap-30">
             <div className="flex flex-col gap-4">
               <h4 className="leading-tight">Reward writers</h4>
               <p>
@@ -121,14 +121,14 @@ const page = () => {
       </section>
 
       <section className="testimonials px-8 py-80 border-b border-[#242424]">
-        <div className="flex flex-row justify-start gap-12">
+        <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
               <h3 className="leading-none">What members are saying</h3>
             </div>
           </div>
-          <div className="max-w-170 flex flex-col gap-30">
-            <div className="flex gap-8">
+          <div className="max-w-170 flex flex-col gap-20 md:gap-30">
+            <div className="flex flex-col lg:flex-row gap-8">
               <div className="img-wrapper overflow-hidden rounded-full">
                 <img
                   src="https://miro.medium.com/v2/resize:fill:160:160/1*djKJlXxmezn6fBPzHnipnw.jpeg"
@@ -153,7 +153,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
               <div className="img-wrapper overflow-hidden rounded-full">
                 <img
                   src="https://miro.medium.com/v2/resize:fill:160:160/1*djKJlXxmezn6fBPzHnipnw.jpeg"
@@ -178,7 +178,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
               <div className="img-wrapper overflow-hidden rounded-full">
                 <img
                   src="https://miro.medium.com/v2/resize:fill:160:160/1*djKJlXxmezn6fBPzHnipnw.jpeg"
@@ -207,14 +207,14 @@ const page = () => {
       </section>
 
       <section className="membership-plans px-8 py-80 border-b border-[#242424]">
-        <div className="flex flex-row justify-start gap-12">
+        <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
               <h3 className="leading-none">Membership plans</h3>
             </div>
           </div>
           <div className="max-w-170 w-full">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-6">
               <div className="card border border-[#e5e5e5] rounded-sm flex flex-col items-center gap-8 p-8">
                 <div className="w-8 h-8">
                   <svg
@@ -226,7 +226,7 @@ const page = () => {
                     role="presentation"
                     aria-hidden="true"
                     focusable="false"
-                    class="w-full! h-full! object-cover"
+                    className="w-full! h-full! object-cover"
                   >
                     <path
                       fill="#FFC017"
@@ -259,7 +259,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -282,7 +282,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -306,7 +306,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -330,7 +330,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -354,7 +354,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -378,7 +378,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -402,7 +402,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -431,7 +431,7 @@ const page = () => {
                     role="presentation"
                     aria-hidden="true"
                     focusable="false"
-                    class="w-full! h-full! object-cover"
+                    className="w-full! h-full! object-cover"
                   >
                     <path
                       fill="#FFC017"
@@ -464,7 +464,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -487,7 +487,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -511,7 +511,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -535,7 +535,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -559,7 +559,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -583,7 +583,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -607,7 +607,7 @@ const page = () => {
                         height="16"
                         fill="none"
                         viewBox="0 0 16 16"
-                        class="w-full! h-full! object-contain"
+                        className="w-full! h-full! object-contain"
                         role="presentation"
                         aria-hidden="true"
                         focusable="false"
@@ -631,7 +631,7 @@ const page = () => {
 
       <section className="cta px-8 py-80 border-b border-[#242424] bg-[#d0d0d066]">
         <div className="flex flex-col justify-center items-center gap-12">
-          <h3 className="leading-none">Unlock a world of wisdom</h3>
+          <h3 className="leading-none text-center">Unlock a world of wisdom</h3>
           <a href="#" className="btn-md btn-primary">
             Get started
           </a>
