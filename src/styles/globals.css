@@ -36,34 +36,47 @@ h2 {
 
 h3 {
   font-family: var(--font-neue-montreal);
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 115%;
+  font-size: 70px;
+  font-weight: 400;
 }
 
 h4 {
   font-family: var(--font-neue-montreal);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 110%;
+  font-size: 48px;
+  font-weight: 400;
 }
 
 h5 {
   font-family: var(--font-onest);
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 400;
-  line-height: normal;
 }
 
 h6 {
   font-family: var(--font-onest);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 120%;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .fs-22 {
   font-size: 22px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.text-gray {
+  color: #6B6B6B;
+}
+
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .btn {
@@ -74,16 +87,36 @@ h6 {
   line-height: normal;
 }
 
+.btn-md {
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  line-height: 24px;
+}
+
 .btn-sm {
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 24px;
   cursor: pointer;
+
 }
 
 .btn-primary {
   background-color: #191919;
   color: #fff;
+}
+
+.btn-outline {
+  color: #242424;
+  border: 1px solid #242424;
+  background-color: transparent;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #1A8917;
 }
 
 
@@ -123,4 +156,22 @@ h6 {
 /* FOOTER SECTION STARTED */
 .footerlinks li {
   display: flex;
+}
+
+
+.human-stories .img-slide {
+  background: linear-gradient(rgba(255, 255, 255, 0) 43.75%, rgb(208, 208, 208) 94.27%), url("https://miro.medium.com/v2/1*pNQWumUtMEZnyCtz3o1MUQ.png") no-repeat center center/cover;
+}
+
+.human-stories .img-wrapper {
+  width: 48px;
+  height: 48px;
+}
+
+
+.testimonials .img-wrapper {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
 }
