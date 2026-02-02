@@ -267,7 +267,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -290,7 +290,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -314,7 +314,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -338,7 +338,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -362,7 +362,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -386,7 +386,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -410,7 +410,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -472,7 +472,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -495,7 +495,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -519,7 +519,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -543,7 +543,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -567,7 +567,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -591,7 +591,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
@@ -615,7 +615,7 @@ const page = () => {
                         <path
                           stroke="#242424"
                           stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           d="M3 8.79 7.103 13 13 3"
                         ></path>
                       </svg>
