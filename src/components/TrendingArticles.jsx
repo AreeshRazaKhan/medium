@@ -79,14 +79,13 @@ const TrendingArticles = () => {
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
-            pagination={{ clickable: true }}
-            // autoplay={{ delay: 3000 }}
+            // pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="pb-5"
           >
             {blogslist.map((blog) => (
               <SwiperSlide key={blog.id}>
