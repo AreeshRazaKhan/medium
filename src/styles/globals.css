@@ -208,6 +208,14 @@ aside .sidebar-nav svg {
 }
 
 
+.trending-articles .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 @media (max-width: 575px) {
   body {
     font-size: 16px;
