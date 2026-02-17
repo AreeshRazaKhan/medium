@@ -3,28 +3,9 @@ import React from "react";
 const Navbar = ({ onMenuClick }) => {
   return (
     <>
-      <header className="border-b border-[#F2F2F2] sticky top-0 bg-white dashboard-header">
+      <header className="border-b border-[#F2F2F2] fixed top-0 left-0 right-0 w-full bg-white z-10 dashboard-header">
         <div className="flex items-center justify-between ps-4 pe-6 h-14.25">
           <div className="flex items-center">
-            <button
-              onClick={onMenuClick}
-              className="flex items-center justify-center w-10 h-10 cursor-pointer close-sidebar"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="text-[#6B6B6B]"
-              >
-                <path
-                  fill="currentColor"
-                  d="M20.6 17.51a.5.5 0 0 1 0 .98l-.1.01h-17a.5.5 0 0 1 0-1h17zm0-6a.5.5 0 0 1 0 .98l-.1.01h-17a.5.5 0 0 1 0-1h17zm0-6a.5.5 0 0 1 0 .98l-.1.01h-17a.5.5 0 0 1 0-1h17z"
-                ></path>
-              </svg>
-            </button>
-
             <div className="logo-wrapper max-w-28.5 ms-2">
               <img src="/images/logo.svg" alt="" />
             </div>
