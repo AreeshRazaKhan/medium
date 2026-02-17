@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Explore Articles", href: "/articles" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact" },
+  { name: "Latest Articles", href: "/articles/latest" },
+  { name: "Featured Articles", href: "/articles/featured" },
 ];
 
 const Navbar = ({ background = "#fff" }) => {
