@@ -98,7 +98,7 @@ const blogslist = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   // 2. Toggle karne ka function
@@ -295,4 +295,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -342,7 +342,7 @@ export const handleImageUpload = async (file, onProgress, abortSignal) => {
     onProgress?.({ progress })
   }
 
-  return "/images/tiptap-ui-placeholder-image.jpg"
+  return URL.createObjectURL(file)
 }
 
 const ATTR_WHITESPACE =
@@ -378,7 +378,7 @@ export function isAllowedUri(
   }
 
   return (!uri || uri.replace(ATTR_WHITESPACE, "").match(new RegExp(// eslint-disable-next-line no-useless-escape
-  `^(?:(?:${allowedProtocols.join("|")}):|[^a-z]|[a-z0-9+.\-]+(?:[^a-z+.\-:]|$))`, "i")));
+    `^(?:(?:${allowedProtocols.join("|")}):|[^a-z]|[a-z0-9+.\-]+(?:[^a-z+.\-:]|$))`, "i")));
 }
 
 export function sanitizeUrl(inputUrl, baseUrl, protocols) {
