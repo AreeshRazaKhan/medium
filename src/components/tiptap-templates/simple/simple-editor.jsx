@@ -80,12 +80,6 @@ const MainToolbarContent = ({
 }) => {
   return (
     <>
-      <Spacer />
-      <ToolbarGroup>
-        <UndoRedoButton action="undo" />
-        <UndoRedoButton action="redo" />
-      </ToolbarGroup>
-      <ToolbarSeparator />
       <ToolbarGroup>
         <HeadingDropdownMenu levels={[2, 3, 4]} portal={isMobile} />
         <ListDropdownMenu types={["bulletList", "orderedList", "taskList"]} portal={isMobile} />

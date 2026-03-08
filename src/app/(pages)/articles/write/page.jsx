@@ -13,7 +13,7 @@ const page = () => {
                     <SimpleEditor />
 
 
-                    <div className='flex items-center justify-center gap-3'>
+                    <div className='flex items-center justify-end gap-3'>
                         <button className='btn btn-outline'>Cancel</button>
                         <button className='btn btn-primary'>Publish</button>
                     </div>
