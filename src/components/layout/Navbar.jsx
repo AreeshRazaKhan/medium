@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -35,13 +35,13 @@ const Navbar = ({ background = "#fff" }) => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className={`navlink ${isDarkBg ? "text-white" : "text-black"}`}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
