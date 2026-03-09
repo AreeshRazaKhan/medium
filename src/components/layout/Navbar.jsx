@@ -27,9 +27,9 @@ const Navbar = ({ background = "#fff" }) => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="logo-wrapper max-w-28.5">
+          <Link href="/" className="logo-wrapper max-w-28.5">
             <img src={logoSrc} alt="Logo" />
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between gap-6">
             {/* Desktop Navigation */}

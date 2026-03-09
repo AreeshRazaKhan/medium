@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import { BubbleMenu } from '@tiptap/react/menus'
 import { LinkPopover, LinkContent } from "@/components/tiptap-ui/link-popover"
 import { ColorHighlightPopoverContent } from "@/components/tiptap-ui/color-highlight-popover"
+import { HeadingDropdownMenu } from '../tiptap-ui/heading-dropdown-menu'
 
 // --- Icons (inline SVGs, no extra deps) ---
 const Icon = ({ d, size = 14 }) => (
@@ -189,12 +190,16 @@ export default function BubbleMenuEditor({ editor }) {
                 }}>
 
                     {/* Text type label */}
-                    <ToolBtn title="Turn into" onClick={() => { }}>
-                        <span style={{ fontSize: 12, color: '#64748b' }}>Text</span>
-                        <Icon d={ICONS.chevronDown} size={11} />
-                    </ToolBtn>
-
+                    <HeadingDropdownMenu levels={[2, 3, 4]} />
                     <Sep />
+
+                    <ToolBtn
+                        active={!editor.isActive('heading')}
+                        title="Normal text"
+                        onClick={() => editor.chain().focus().setParagraph().run()}
+                    >
+                        <span style={{ fontSize: 12, fontWeight: 600 }}>Text</span>
+                    </ToolBtn>
 
                     {/* Core formatting */}
                     <ToolBtn active={editor.isActive('bold')} title="Bold (⌘B)" onClick={() => fmt('toggleBold')}>

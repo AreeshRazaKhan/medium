@@ -43,7 +43,7 @@ export default function Home() {
             {/* Sidebar */}
             <div className="flex-1 sticky top-24 h-fit hidden lg:block border-l border-gray-50 pl-10">
               <div className="">
-                <h2 className="mb-6 fs-16">Editor's Picks</h2>
+                <h2 className="mb-6 fs-16">Editor&apos;s Picks</h2>
 
                 <EditorsPick />
               </div>
