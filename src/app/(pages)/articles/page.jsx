@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../dashboard/components/Navbar";
 import EditorsPick from "@/components/EditorsPick";
 import ArticleUI from "@/components/ui/ArticleUI";
+import Footer from "@/components/layout/Footer";
 
 const blogslist = [
   {
@@ -128,28 +129,12 @@ const page = () => {
                   </button>
                 </div>
               </div>
-
-              <footer className="pt-10 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-gray-500 border-t border-gray-100">
-                <a href="#" className="hover:text-black">
-                  Help
-                </a>
-                <a href="#" className="hover:text-black">
-                  About
-                </a>
-                <a href="#" className="hover:text-black">
-                  Careers
-                </a>
-                <a href="#" className="hover:text-black">
-                  Privacy
-                </a>
-                <a href="#" className="hover:text-black">
-                  Terms
-                </a>
-              </footer>
             </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

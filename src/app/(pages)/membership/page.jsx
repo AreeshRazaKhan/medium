@@ -78,7 +78,7 @@ const page = () => {
         <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
-              <h3 className="leading-none">Why membership?</h3>
+              <h3 className="leading-none font-onest">Why membership?</h3>
             </div>
           </div>
           <div className="max-w-170 flex flex-col gap-20 md:gap-30">
@@ -124,7 +124,9 @@ const page = () => {
         <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
-              <h3 className="leading-none">What members are saying</h3>
+              <h3 className="leading-none font-onest">
+                What members are saying
+              </h3>
             </div>
           </div>
           <div className="max-w-170 flex flex-col gap-20 md:gap-30">
@@ -210,7 +212,7 @@ const page = () => {
         <div className="flex flex-col lg:flex-row justify-start gap-12">
           <div className="max-w-121.25">
             <div className=" sticky top-38">
-              <h3 className="leading-none">Membership plans</h3>
+              <h3 className="leading-none font-onest">Membership plans</h3>
             </div>
           </div>
           <div className="max-w-170 w-full">
@@ -631,7 +633,9 @@ const page = () => {
 
       <section className="cta px-8 py-80 border-b border-[#242424] bg-[#d0d0d066]">
         <div className="flex flex-col justify-center items-center gap-12">
-          <h3 className="leading-none text-center">Unlock a world of wisdom</h3>
+          <h3 className="leading-none text-center -tracking-[0.1rem]">
+            Unlock a world of wisdom
+          </h3>
           <a href="#" className="btn-md btn-primary">
             Get started
           </a>

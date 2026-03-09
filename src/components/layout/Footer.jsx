@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = ({ background = "#fff" }) => {
@@ -8,7 +9,10 @@ const Footer = ({ background = "#fff" }) => {
         style={{ backgroundColor: background }}
       >
         <div className="container mx-auto">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="logo-wrapper max-w-28.5">
+              <img src={"/images/logo.svg"} alt="Logo" />
+            </Link>
             <ul className="flex items-center justify-center gap-4 footerlinks">
               <li>
                 <a href="#" className="footer-link">

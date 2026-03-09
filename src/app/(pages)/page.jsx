@@ -6,6 +6,7 @@ import FeaturedArticles from "@/components/FeaturedArticles";
 import CategoryArticles from "@/components/CategoryArticles";
 import LatestArticles from "@/components/LatestArticles";
 import EditorsPick from "@/components/EditorsPick";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -65,24 +66,6 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-
-              <footer className="pt-10 flex flex-wrap gap-x-4 gap-y-2 text-[14px] text-gray-500 border-t border-gray-100">
-                <a href="#" className="hover:text-black">
-                  Help
-                </a>
-                <a href="#" className="hover:text-black">
-                  About
-                </a>
-                <a href="#" className="hover:text-black">
-                  Careers
-                </a>
-                <a href="#" className="hover:text-black">
-                  Privacy
-                </a>
-                <a href="#" className="hover:text-black">
-                  Terms
-                </a>
-              </footer>
             </div>
           </div>
         </div>
@@ -96,6 +79,8 @@ export default function Home() {
           <LatestArticles />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }

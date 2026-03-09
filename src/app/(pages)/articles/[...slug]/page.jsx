@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import LatestArticles from "@/components/LatestArticles";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const categories = [
   // Ab 'All' ka link seedha /articles (aapka main page) par jayega
@@ -89,6 +90,8 @@ const Page = () => {
           <LatestArticles category={currentSlug} />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

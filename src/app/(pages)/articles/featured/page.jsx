@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../dashboard/components/Navbar";
 import LatestArticles from "@/components/LatestArticles";
+import Footer from "@/components/layout/Footer";
 
 const page = () => {
   return (
@@ -27,6 +28,8 @@ const page = () => {
           <LatestArticles />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };
