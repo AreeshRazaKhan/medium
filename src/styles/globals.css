@@ -23,27 +23,31 @@ img {
 }
 
 h1 {
-  font-family: var(--font-neue-montreal);
+  font-family: var(--font-montserrat);
+
   font-size: 120px;
   font-weight: 400;
   line-height: 106.667%;
 }
 
 h2 {
-  font-family: var(--font-neue-montreal);
+  font-family: var(--font-montserrat);
+
   font-size: 85px;
   font-weight: 500;
   line-height: 111.111%;
 }
 
 h3 {
-  font-family: var(--font-neue-montreal);
+  font-family: var(--font-montserrat);
+
   font-size: 70px;
   font-weight: 400;
 }
 
 h4 {
-  font-family: var(--font-neue-montreal);
+  font-family: var(--font-montserrat);
+
   font-size: 48px;
   font-weight: 400;
 }
@@ -58,6 +62,15 @@ h6 {
   font-family: var(--font-onest);
   font-size: 24px;
   font-weight: 500;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+
+}
+
+.font-onest {
+  font-family: var(--font-onest);
 }
 
 .fs-22 {

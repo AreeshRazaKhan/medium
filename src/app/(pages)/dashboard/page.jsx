@@ -1,202 +1,153 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import MyArticles from "./components/MyArticles";
+import Stats from "./components/Stats";
+import BlueTick from "./components/BlueTick";
+import FeaturedSlot from "./components/FeaturedSlot";
+import Wallet from "./components/Wallet";
+import Settings from "./components/Settings";
 
-const navLinks = [
-  {
-    id: 1,
-    title: "Home",
-    link: "/",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" d="M4.5 10.75v10.5c0 .138.112.25.25.25h5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v5.5c0 .138.112.25.25.25h5a.25.25 0 0 0 .25-.25v-10.5M22 9l-9.1-6.825a1.5 1.5 0 0 0-1.8 0L2 9"></path></svg>`,
-  },
-  {
-    id: 2,
-    title: "Library",
-    link: "/",
-    icon: `<svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" d="M6.44 6.69a1.5 1.5 0 0 1 1.06-.44h9a1.5 1.5 0 0 1 1.06.44l.354-.354-.353.353A1.5 1.5 0 0 1 18 7.75v14l-5.694-4.396-.306-.236-.306.236L6 21.75v-14c0-.398.158-.78.44-1.06Z"></path><path stroke="currentColor" strokeLinecap="round" d="M12.5 2.75h-8a2 2 0 0 0-2 2v11.5"></path></svg>`,
-  },
-  {
-    id: 3,
-    title: "Profile",
-    link: "/",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4.5" stroke="currentColor"></circle><path stroke="currentColor" strokeLinecap="round" d="M3.5 21.5v-4.342C3.5 15.414 7.306 14 12 14s8.5 1.414 8.5 3.158V21.5"></path></svg>`,
-  },
-  {
-    id: 4,
-    title: "Stories",
-    link: "/",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" d="M4.75 21.5h14.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25H4.75a.25.25 0 0 0-.25.25v18.5c0 .138.112.25.25.25Z"></path><path stroke="currentColor" strokeLinecap="round" d="M8 8.5h8M8 15.5h5M8 12h8"></path></svg>`,
-  },
-  {
-    id: 5,
-    title: "Stats",
-    link: "/",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" d="M2.75 19h4.5a.25.25 0 0 0 .25-.25v-6.5a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25ZM9.75 19h4.5a.25.25 0 0 0 .25-.25V8.25a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25ZM16.75 19h4.5a.25.25 0 0 0 .25-.25V4.25a.25.25 0 0 0-.25-.25h-4.5a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25Z"></path></svg>`,
-  },
+// Separate Components Import (Scalability ke liye)
+// Inka placeholder niche renderContent mein handle kiya hai
+
+const userFeaturedStatus = {
+  isSlotActive: false, // Ye DB se aayega (True/False)
+  expiryDate: "20 March, 2026",
+  slotsTaken: 12, // Ye Admin Panel se count hokar aayega
+};
+
+const myArticles = [
+  { id: 1, title: "How to Grow your Blog in 2026" },
+  { id: 2, title: "Mastering Next.js 15" },
 ];
 
-const blogslist = [
-  {
-    id: 1,
-    featured: true,
-    title: "Rank 1st page on google with cutting-edge AIO and AEO",
-    excerpt:
-      "Sometimes the bravest thing you do isn’t leaving people, it’s finally telling yourself the truth about them.",
-    featuredImage:
-      "https://www.seoclerk.com/pics/t/000/004/987/fc431d5ad85018822c8abc4b2d59ee47.gif",
-    url: "#",
-    author: "ajlancer",
-    authorImage:
-      "https://www.seoclerk.com/images/membersprofilepic/thumbs/519520x5EJa1727612454.png",
-    likesQuantity: "1,034",
-    views: "1k",
-  },
-  {
-    id: 2,
-    featured: true,
-    title: "Rank 1st page on google with cutting-edge AIO and AEO",
-    excerpt:
-      "Sometimes the bravest thing you do isn’t leaving people, it’s finally telling yourself the truth about them.",
-    featuredImage:
-      "https://www.seoclerk.com/pics/t/000/004/987/fc431d5ad85018822c8abc4b2d59ee47.gif",
-    url: "#",
-    author: "ajlancer",
-    authorImage:
-      "https://www.seoclerk.com/images/membersprofilepic/thumbs/519520x5EJa1727612454.png",
-    likesQuantity: "1,034",
-    views: "1k",
-  },
-  {
-    id: 3,
-    featured: true,
-    title: "Rank 1st page on google with cutting-edge AIO and AEO",
-    excerpt:
-      "Sometimes the bravest thing you do isn’t leaving people, it’s finally telling yourself the truth about them.",
-    featuredImage:
-      "https://www.seoclerk.com/pics/t/000/004/987/fc431d5ad85018822c8abc4b2d59ee47.gif",
-    url: "#",
-    author: "ajlancer",
-    authorImage:
-      "https://www.seoclerk.com/images/membersprofilepic/thumbs/519520x5EJa1727612454.png",
-    likesQuantity: "1,034",
-    views: "1k",
-  },
-  {
-    id: 4,
-    featured: false,
-    title: "Rank 1st page on google with cutting-edge AIO and AEO",
-    excerpt:
-      "Sometimes the bravest thing you do isn’t leaving people, it’s finally telling yourself the truth about them.",
-    featuredImage:
-      "https://www.seoclerk.com/pics/t/000/004/987/fc431d5ad85018822c8abc4b2d59ee47.gif",
-    url: "#",
-    author: "ajlancer",
-    authorImage:
-      "https://www.seoclerk.com/images/membersprofilepic/thumbs/519520x5EJa1727612454.png",
-    likesQuantity: "1,034",
-    views: "1k",
-  },
-];
-
-const page = () => {
+const DashboardPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [activeTab, setActiveTab] = useState("Articles");
 
-  // 2. Toggle karne ka function
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
+  // Tab Switching Logic
+  const renderContent = () => {
+    switch (activeTab) {
+      case "Articles":
+        return <MyArticles />;
+      case "Stats":
+        return <Stats />;
+      case "BlueTick":
+        return <BlueTick isVerified={false} expiryDate="April 8, 2026" />;
+      case "Featured":
+        return (
+          <FeaturedSlot
+            isSlotActive={userFeaturedStatus.isSlotActive}
+            expiryDate={userFeaturedStatus.expiryDate}
+            slotsTaken={userFeaturedStatus.slotsTaken}
+            myArticles={myArticles} // <-- Yahan humne list pass kar di
+          />
+        );
+      case "Wallet":
+        return <Wallet />;
+      case "Settings":
+        return <Settings />;
+      default:
+        return <MyArticles />;
+    }
+  };
+
+  const navLinks = [
+    {
+      id: "Articles",
+      title: "My Articles",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>`,
+    },
+    {
+      id: "Stats",
+      title: "My Levels & Stats",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>`,
+    },
+    {
+      id: "BlueTick",
+      title: "Buy Blue Tick",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+    },
+    {
+      id: "Featured",
+      title: "Buy Featured Slot",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" /></svg>`,
+    },
+    {
+      id: "Wallet",
+      title: "Wallet / Add Funds",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>`,
+    },
+    {
+      id: "Settings",
+      title: "Profile Settings",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`,
+    },
+  ];
+
   return (
-    <>
-      <section>
-        <Navbar onMenuClick={toggleSidebar} />
-        <div className="flex">
-          <aside
-            className={`${isSidebarOpen ? "w-60" : "w-0 "} transition-all duration-300 `}
-          >
-            <div className="sticky top-14.25 h-[calc(100vh-57px)] overflow-hidden border-r border-[#f2f2f2] flex flex-col w-full bg-white">
-              <div className="pt-10">
-                <ul className="flex flex-col gap-5">
-                  {navLinks.map((navLink) => (
-                    <li key={navLink.id}>
-                      <a
-                        href={navLink.link}
-                        className="ps-6 flex items-center gap-4 leading-4 sidebar-nav"
-                      >
-                        <div
-                          className="w-6 h-6 icon-wrapper"
-                          dangerouslySetInnerHTML={{ __html: navLink.icon }}
-                        />
-                        <span>{navLink.title}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </aside>
+    <section className="bg-white h-screen overflow-hidden">
+      <Navbar onMenuClick={toggleSidebar} />
 
-          <div className="w-full">
-            <div className="flex justify-evenly max-w-334 mx-auto">
-              <main className="max-w-[calc(100% - 368px)] w-full pt-9"></main>
+      <div className="flex pt-14.5">
+        {/* SIDEBAR */}
+        <aside
+          className={`${isSidebarOpen ? "w-64" : "w-0"} transition-all duration-300 border-r border-gray-100 overflow-hidden`}
+        >
+          <div className="sticky top-0 h-[calc(100vh-57px)] flex flex-col bg-white">
+            <div className="pt-8 px-4 flex flex-col justify-between h-full pb-6">
+              <ul className="space-y-1">
+                {navLinks.map((link) => (
+                  <li key={link.id}>
+                    <button
+                      onClick={() => setActiveTab(link.id)}
+                      className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-sm font-medium cursor-pointer ${
+                        activeTab === link.id
+                          ? "bg-black text-white shadow-md"
+                          : "text-gray-600 hover:bg-gray-50 hover:text-black"
+                      }`}
+                    >
+                      <div
+                        dangerouslySetInnerHTML={{ __html: link.icon }}
+                        className={
+                          activeTab === link.id ? "text-white" : "text-gray-400"
+                        }
+                      />
+                      <span>{link.title}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
 
-              <div className="max-w-92 w-full ps-10 pe-6 border-s border-[#F2F2F2]">
-                <div className="sticky top-14.25">
-                  <div className="mt-10">
-                    <h2 className="mb-6 fs-16">Staff Picks</h2>
-
-                    {blogslist.slice(0, 3).map((blog) => (
-                      <a
-                        href={blog.url}
-                        key={blog.id}
-                        className="pb-5 flex flex-col"
-                      >
-                        <div className="blog-author gap-2 flex items-center mb-3">
-                          <div className="img-wrapper w-5 h-5 rounded-full overflow-hidden ">
-                            <img
-                              src={blog.authorImage}
-                              className="w-full! h-full! object-cover"
-                              alt=""
-                            />
-                          </div>
-                          <p className="text-[12px]">{blog.author}</p>
-                        </div>
-                        <h3 className="fs-16 font-bold! leading-5">
-                          {blog.title}
-                        </h3>
-                      </a>
-                    ))}
-                  </div>
-
-                  <div className="mt-10">
-                    <h2 className="mb-6 fs-16">Recommended topics</h2>
-
-                    <div className="flex flex-wrap gap-x-2 gap-y-2.5">
-                      <button className="btn-sm bg-[#F2F2F2]">
-                        Data Science
-                      </button>
-                      <button className="btn-sm bg-[#F2F2F2]">
-                        Self Improvement
-                      </button>
-                      <button className="btn-sm bg-[#F2F2F2]">Writing</button>
-                      <button className="btn-sm bg-[#F2F2F2]">
-                        Technology
-                      </button>
-                      <button className="btn-sm bg-[#F2F2F2]">
-                        Relationships
-                      </button>
-                      <button className="btn-sm bg-[#F2F2F2]">Politics</button>
-                      <button className="btn-sm bg-[#F2F2F2]">
-                        Cryptocurrency
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Logout Button at bottom */}
+              <button className="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-all text-sm font-medium mt-auto cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>Logout</span>
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-    </>
+        </aside>
+
+        {/* MAIN DYNAMIC AREA */}
+        <main className="flex-1 bg-white h-[calc(100vh-57px)] overflow-auto">
+          <div className="max-w-5xl mx-auto px-8 py-10">{renderContent()}</div>
+        </main>
+      </div>
+    </section>
   );
 };
 
-export default page;
+export default DashboardPage;
